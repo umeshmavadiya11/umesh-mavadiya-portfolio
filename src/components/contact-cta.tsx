@@ -1,0 +1,7 @@
+import Link from "next/link";
+import { ArrowUpRight, Asterisk, MoveUpRight } from "lucide-react";
+import { profiles } from "@/lib/site";
+
+export function ContactCTA() {
+  return <section className="contact-cta-section section" id="contact"><div className="container"><div className="contact-cta" data-reveal><div className="cta-grid" aria-hidden="true" /><div className="cta-content"><p className="eyebrow"><span className="status-dot" /> GOOD PRODUCTS START WITH A CONVERSATION</p><h2>Have something<br />great in mind<span>?</span></h2><p>A new idea. An existing application. A technical challenge.<br className="desktop-break" /> Let’s build something scalable, reliable, and easy to maintain.</p><div className="cta-actions"><Link className="button button-accent" href="/contact">Start a conversation <ArrowUpRight size={18} /></Link><Link className="button button-ghost-light" href={profiles.contra} target={profiles.contra.startsWith("https") ? "_blank" : undefined} rel={profiles.contra.startsWith("https") ? "noopener noreferrer" : undefined}><span className="contra-symbol" aria-hidden="true">✳</span> View my Contra profile <ArrowUpRight size={16} /></Link></div></div><div className="cta-art" aria-hidden="true"><div className="cta-art-circle"><MoveUpRight strokeWidth={1} /></div><Asterisk className="cta-asterisk" strokeWidth={1} /><span>LET’S MAKE IT HAPPEN.</span></div></div></div></section>;
+}
